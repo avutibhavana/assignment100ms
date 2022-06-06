@@ -5,6 +5,7 @@ import {
   selectIsLocalAudioEnabled,
   selectIsLocalVideoEnabled
 } from "@100mslive/hms-video-react";
+import Time from "./Time";
 
 const ControlBar = () => {
   const hmsActions = useHMSActions();
@@ -19,6 +20,7 @@ const ControlBar = () => {
 
   return (
     <div className="fixed bottom-0 h-10 bg-gray-400 w-screen flex items-center justify-center">
+      <Time time={Date.now()} />
       <button
         className="text-xs uppercase tracking-wider bg-white py-1 px-2 rounded-lg shadow-lg text-indigo-500 mr-2"
         onClick={toggleAudio}
